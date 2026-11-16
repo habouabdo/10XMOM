@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @head -->
+<title>Become a Mom – 10x MoM</title>
+<meta name="description" content="Join 10x MoM: flexible laundry work in your own area of Lebanon. Apply in two minutes.">
+<script src="/assets/join.js" defer></script>
+</head>
+<body>
+<!-- @header -->
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap grid-2 split">
+      <div>
+        <span class="eyebrow">Become a Mom</span>
+        <h1>Turn your care into income</h1>
+        <p class="lead">Pick up, wash, iron and deliver laundry for families in your own area, on hours that fit your life.</p>
+        <ul class="feature-list">
+          <li><span class="dot"></span><div><strong>Flexible hours</strong><span>Choose the areas and time windows you want to work.</span></div></li>
+          <li><span class="dot"></span><div><strong>Customers near you</strong><span>Orders come from your own neighbourhood.</span></div></li>
+          <li><span class="dot"></span><div><strong>We handle the admin</strong><span>Bookings, pricing and Whish payments are managed by our team.</span></div></li>
+        </ul>
+      </div>
+      <form id="join-form" class="card" novalidate>
+        <h2 class="h3">Apply in two minutes</h2>
+        <div class="field">
+          <label for="j-name">Full name</label>
+          <input id="j-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+        </div>
+        <div class="field">
+          <label for="j-phone">WhatsApp number</label>
+          <input id="j-phone" name="phone" type="tel" inputmode="tel" placeholder="03 123 456" required>
+        </div>
+        <div class="field">
+          <label for="j-area">Your area</label>
+          <select id="j-area" name="area" required><option value="">Choose your area…</option></select>
+        </div>
+        <div class="field">
+          <label for="j-exp">Tell us about you <span class="hint">(optional)</span></label>
+          <textarea id="j-exp" name="experience" maxlength="1000" placeholder="Your laundry experience, available days, equipment at home…"></textarea>
+        </div>
+        <div class="field">
+          <label class="check"><input type="checkbox" name="has_car"> I have a car for pickups and deliveries</label>
+        </div>
+        <p class="form-error" id="join-error" role="alert" hidden></p>
+        <p class="form-ok" id="join-ok" role="status" hidden>Thank you! We received your application and will contact you on WhatsApp.</p>
+        <button class="btn btn-primary btn-block" type="submit">Send application</button>
+      </form>
+    </div>
+  </section>
+</main>
+<!-- @footer -->
+</body>
+</html>

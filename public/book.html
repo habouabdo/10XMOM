@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @head -->
+<title>Book a pickup – 10x MoM</title>
+<meta name="description" content="Choose your Mom and a pickup time. We collect your laundry and send the price on WhatsApp. Pay with Whish.">
+<script src="/assets/book.js" defer></script>
+</head>
+<body>
+<!-- @header -->
+<main id="main">
+  <section class="page-hero">
+    <div class="narrow">
+      <span class="eyebrow">Book a pickup</span>
+      <h1>Let's get your laundry sorted</h1>
+      <p class="lead">Five quick steps. Nothing to pay now: we price your order after pickup and send you a Whish link on WhatsApp.</p>
+
+      <ol class="stepper" aria-label="Booking steps">
+        <li>Address</li><li>Your Mom</li><li>Pickup time</li><li>Clothes</li><li>Confirm</li>
+      </ol>
+
+      <form id="book-form" class="card" novalidate>
+        <section class="step" data-step="0" aria-labelledby="s0">
+          <h2 id="s0" tabindex="-1">Where should we pick up?</h2>
+          <div class="field">
+            <label for="area">Area</label>
+            <select id="area" name="area" required><option value="">Choose your area…</option></select>
+            <span class="hint">Don't see your area? <a data-wa="Hi 10x MoM! Do you cover my area?" hidden href="#">Ask us on WhatsApp</a></span>
+          </div>
+          <div class="field">
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text" autocomplete="street-address" maxlength="300" placeholder="Street, building name" required>
+          </div>
+          <div class="field">
+            <label for="address_notes">Building, floor &amp; directions <span class="hint">(optional)</span></label>
+            <input id="address_notes" name="address_notes" type="text" maxlength="200" placeholder="e.g. 3rd floor, next to the pharmacy">
+          </div>
+        </section>
+
+        <section class="step" data-step="1" aria-labelledby="s1" hidden>
+          <h2 id="s1" tabindex="-1">Choose your Mom</h2>
+          <p class="muted">These Moms pick up in <strong data-area-name></strong>.</p>
+          <div class="choice-grid" id="mom-list" role="radiogroup" aria-labelledby="s1"></div>
+        </section>
+
+        <section class="step" data-step="2" aria-labelledby="s2" hidden>
+          <h2 id="s2" tabindex="-1">When should we come?</h2>
+          <p class="muted">Pickup times are in Lebanon time, in two-hour windows.</p>
+          <div class="label">Day</div>
+          <div class="chips" id="date-list"></div>
+          <div class="label">Time</div>
+          <div class="slot-grid" id="slot-list"></div>
+        </section>
+
+        <section class="step" data-step="3" aria-labelledby="s3" hidden>
+          <h2 id="s3" tabindex="-1">What are we picking up?</h2>
+          <p class="muted">A rough count is fine. Your Mom checks everything at pickup and we send the exact price.</p>
+          <div class="items" id="item-list"></div>
+          <div class="field">
+            <label for="notes">Notes for your Mom <span class="hint">(optional)</span></label>
+            <textarea id="notes" name="notes" maxlength="500" placeholder="Stains, delicate fabrics, allergies, how you like things ironed…"></textarea>
+          </div>
+        </section>
+
+        <section class="step" data-step="4" aria-labelledby="s4" hidden>
+          <h2 id="s4" tabindex="-1">Your details</h2>
+          <div class="row-2">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+            </div>
+            <div class="field">
+              <label for="phone">WhatsApp number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="03 123 456" required>
+            </div>
+          </div>
+          <ul class="summary" id="summary"></ul>
+          <p class="notice">No payment now. After pickup we'll WhatsApp you the price and a Whish payment link. Your clothes are delivered back once it's paid.</p>
+        </section>
+
+        <p class="form-error" id="book-error" role="alert" hidden></p>
+        <div class="step-nav">
+          <button type="button" class="btn btn-ghost" id="back-btn" hidden>Back</button>
+          <button type="submit" class="btn btn-primary" id="next-btn">Continue</button>
+        </div>
+      </form>
+
+      <section id="book-done" class="card done-panel" hidden aria-live="polite">
+        <svg class="done-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.6-4.7-9.7-9.4C.8 8.2 3 4.5 6.7 4.5c2.1 0 3.9 1.2 5.3 3 1.4-1.8 3.2-3 5.3-3 3.7 0 5.9 3.7 4.4 7.1C19.6 16.3 12 21 12 21z"/></svg>
+        <h2 tabindex="-1" id="done-title">You're booked!</h2>
+        <p>Your order code is</p>
+        <div class="code" id="done-code"></div>
+        <p class="lead" id="done-text"></p>
+        <p class="muted">Keep your code. You'll need it with your WhatsApp number to track your order.</p>
+        <div class="done-actions">
+          <a class="btn btn-primary" id="done-track" href="/track">Track my order</a>
+          <a class="btn btn-wa" id="done-wa" hidden href="#" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+<!-- @footer -->
+</body>
+</html>

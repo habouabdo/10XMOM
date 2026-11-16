@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @head -->
+<title>Track your order – 10x MoM</title>
+<meta name="description" content="Check the status of your 10x MoM laundry order and pay with Whish.">
+<script src="/assets/track.js" defer></script>
+</head>
+<body>
+<!-- @header -->
+<main id="main">
+  <section class="page-hero">
+    <div class="narrow">
+      <span class="eyebrow">Track order</span>
+      <h1>Where are my clothes?</h1>
+      <p class="lead">Enter your order code and the WhatsApp number you booked with.</p>
+      <form id="track-form" class="card" novalidate>
+        <div class="row-2">
+          <div class="field">
+            <label for="code">Order code</label>
+            <input id="code" name="code" type="text" placeholder="10X-ABC123" autocapitalize="characters" maxlength="20" required>
+          </div>
+          <div class="field">
+            <label for="phone">WhatsApp number</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="03 123 456" required>
+          </div>
+        </div>
+        <p class="form-error" id="track-error" role="alert" hidden></p>
+        <button class="btn btn-primary" type="submit">Track order</button>
+      </form>
+      <div id="track-result" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+<!-- @footer -->
+</body>
+</html>

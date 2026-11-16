@@ -1,0 +1,14 @@
+{
+  "name": "10xmom",
+  "version": "0.1.0",
+  "private": true,
+  "description": "10x MoM – laundry pickup and delivery booking site for Lebanon",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
