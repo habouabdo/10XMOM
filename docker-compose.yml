@@ -1,0 +1,25 @@
+# Development database only. Production uses MySQL 8.4 on the company server (see documentation/deployment-guide.md).
+# Credentials come from ./.env (gitignored): MYSQL_ROOT_PASSWORD, MYSQL_PASSWORD
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: 10xmom-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: 10xmom
+      MYSQL_USER: 10xmom
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?set MYSQL_PASSWORD in .env}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?set MYSQL_ROOT_PASSWORD in .env}
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_ai_ci"]
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-p$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+volumes:
+  mysql-data:

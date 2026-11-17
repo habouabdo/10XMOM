@@ -2,59 +2,57 @@
 
 Laundry pickup and delivery booking site for Lebanon.
 
-## How an order works
+```
+10xmom/
+├── frontend/        Next.js 15 + React 19 + TypeScript + Tailwind 4, PWA
+├── backend/         NestJS 11 + Prisma + MySQL 8.4, REST API at /api/v1, Swagger at /api/docs
+├── documentation/   architecture.md · api-documentation.md · deployment-guide.md
+├── docs/            Source material (full-stack spec, Global Laundry price list)
+└── legacy/          Previous plain-Node + SQLite version, kept as reference until the new stack is live
+```
 
-1. **The customer books** at `/book`: area and address, then a Mom (or "Any available Mom"), a pickup day and time, what they're sending, and their name and WhatsApp number. Nothing is paid at this step. They get an order code like `10X-7KQ2PM`.
-2. **The Mom picks up the clothes.** In `/admin`, set the status to *Picked up*.
-3. **Price it.** Enter the price (USD) and paste the **Whish payment link**, then save. The order moves to *Priced – awaiting payment*. Click **Send price + Whish link** to open WhatsApp with the message already written.
-4. **The customer pays** through Whish. Mark the order *Paid*, then *Out for delivery*, then *Delivered*. Each step has a ready-made WhatsApp message.
+## What customers can do
 
-Customers can follow every step at `/track` using their code and WhatsApp number.
+- **Book** (`/book`): area and address, a Mom (or "any available"), a pickup slot, items from the price
+  list with standard or next-day express, an optional gift card code, then name and WhatsApp. Nothing is
+  paid at booking. They get a code like `10X-7KQ2PM`.
+- **Price calculator** (`/pricing`): every price-list item, search, live LBP/USD estimate. "Book with these
+  items" carries the basket into the booking form.
+- **Gift cards** (`/gift-cards`): choose an amount, add a message, and see a live preview of the card.
+  Paid through a Whish link on WhatsApp.
+- **Track** (`/track`) every step with the code and WhatsApp number, and pay through the Whish link once the order is priced.
+- Services, About us, How it works, FAQ, Contact, and Become a Mom (applications).
 
-## Run it
+## How an order works (admin at `/admin`)
 
-Requires Node.js 22.13 or later (this server has Node 24). There are no npm packages to install.
+1. The order arrives as *Booked*, with the items and an estimate.
+2. The Mom picks it up. Set *Picked up*.
+3. Enter the final price (USD, or click "Use estimate") and the Whish link, then save. The order becomes
+   *Priced* and any gift card is deducted. Click the WhatsApp button to send the price and link.
+4. The customer pays. Then mark *Paid*, *Out for delivery* and *Delivered*, each with a ready-made WhatsApp message.
+
+Gift cards: a new card is *Awaiting payment*. Paste a Whish link, send it, and click **Mark paid · activate**.
+
+## Run it locally
+
+You need Node.js 22+ and MySQL 8.4.
 
 ```bash
-cd 10xmom
-node server.js          # http://127.0.0.1:3410
+# 1. API
+cd backend
+cp .env.example .env              # set DATABASE_URL, JWT_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD
+npm install
+npx prisma migrate dev --name init
+npm run seed
+npm run start:dev                 # http://127.0.0.1:4000/api/v1  ·  docs: /api/docs
+
+# 2. Website (second terminal)
+cd frontend
+cp .env.example .env.local
+npm install
+npm run dev                       # http://localhost:3000
 ```
 
-On first start the server creates `data/10xmom.sqlite` and a random admin password in `data/admin-password.txt`. Log in at `/admin`, change the password under **Settings**, then delete that file.
+Tests: `cd backend && npm test` (price engine, phone parsing, slot rules).
 
-Environment variables (all optional):
-
-| Variable | Default | Purpose |
-|---|---|---|
-| `PORT` | `3410` | Port to listen on |
-| `HOST` | `127.0.0.1` | Address to bind (keep it local behind IIS) |
-| `NODE_ENV` | | Set to `production` to cache page templates |
-| `DATA_DIR` | `./data` | Where the database lives. **Back this folder up.** |
-| `ADMIN_PASSWORD` | | Resets the admin password at startup |
-| `TRUST_PROXY` | | `1` when behind IIS/Cloudflare, so rate limits see the real visitor IP |
-| `COOKIE_SECURE` | | `1` when the site is served over HTTPS |
-
-## First-time setup in /admin
-
-- **Settings:** your business WhatsApp number (this turns on the WhatsApp buttons across the site), your website address, service areas, pickup time slots, clothes types, and how many pickups one Mom can take per time slot.
-- **Moms:** four sample Moms are created so booking works out of the box. Edit them or set them inactive, and add your real Moms with the areas they cover.
-- **Prices:** customers aren't shown prices. You price each order after pickup.
-
-## Going live on this IIS server
-
-Node runs the site, and IIS forwards your domain to it:
-
-1. Install **Application Request Routing (ARR)** for IIS and enable its proxy. URL Rewrite is already installed.
-2. Create an IIS site for your domain and add a reverse-proxy rule to `http://127.0.0.1:3410`.
-3. Keep Node running as a Windows service (for example with NSSM or `pm2`), with `NODE_ENV=production`, `TRUST_PROXY=1` and `COOKIE_SECURE=1`.
-4. Add HTTPS (win-acme / Let's Encrypt, or Cloudflare).
-
-## Project layout
-
-```
-server.js            HTTP server, API, validation, admin auth
-db.js                SQLite schema (node:sqlite) + settings helpers
-public/              pages (shared header/footer in public/partials)
-public/assets/       styles.css, site.js (shared), book.js, track.js, join.js, admin.js
-data/                database + generated admin password (not in git)
-```
+See [documentation/deployment-guide.md](documentation/deployment-guide.md) for production, backups and updates.

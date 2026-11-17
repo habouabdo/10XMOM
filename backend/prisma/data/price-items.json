@@ -1,0 +1,776 @@
+[
+ {
+  "category": "Bundles",
+  "subcategory": "Everyday Laundry",
+  "name": "Wash & Fold — Bag 7kg",
+  "description": "Up to 7 kg, washed, dried and neatly folded.",
+  "priceLbp": 1350000,
+  "unit": "Per bag (up to 7 kg)",
+  "sortOrder": 0
+ },
+ {
+  "category": "Bundles",
+  "subcategory": "Everyday Laundry",
+  "name": "Wash & Steam — 10 Items",
+  "description": "Ten everyday items, washed and steam-finished.",
+  "priceLbp": 1500000,
+  "unit": "Per bundle (10 items)",
+  "sortOrder": 1
+ },
+ {
+  "category": "Bundles",
+  "subcategory": "Special Care",
+  "name": "Sneaker Care",
+  "description": "Detailed sneaker cleaning with careful finishing.",
+  "priceLbp": 1000000,
+  "unit": "Per item",
+  "sortOrder": 2
+ },
+ {
+  "category": "Bundles",
+  "subcategory": "Special Care",
+  "name": "Bed & Bath Refresh",
+  "description": "1 fitted sheet, 1 duvet cover, 2 pillowcases and 2 large towels.",
+  "priceLbp": 1650000,
+  "unit": "Per bundle",
+  "sortOrder": 3
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "T-shirt",
+  "description": "Care-label cleaning with a neat finish.",
+  "priceLbp": 300000,
+  "unit": "Per item",
+  "sortOrder": 4
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "Polo",
+  "description": "Collar-conscious cleaning and finishing.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 5
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "Shirt",
+  "description": "Cleaned, pressed and returned ready to wear.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 6
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "Shirt, Folded",
+  "description": "Cleaned, pressed and neatly folded.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 7
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "Blouse",
+  "description": "Gentle care for shaped or delicate tops.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 8
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "Hoodie",
+  "description": "Fabric-safe cleaning for casual outerwear.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 9
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "Sweater",
+  "description": "Gentle treatment designed to protect shape.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 10
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Tops",
+  "name": "Shirt, Silk",
+  "description": "Specialist care for delicate silk.",
+  "priceLbp": 500000,
+  "unit": "Per item",
+  "sortOrder": 11
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Bottoms",
+  "name": "Shorts",
+  "description": "Cleaned and neatly finished.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 12
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Bottoms",
+  "name": "Jeans",
+  "description": "Fabric-safe cleaning that protects structure.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 13
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Bottoms",
+  "name": "Pants, Trouser",
+  "description": "Tailored cleaning with a crisp finish.",
+  "priceLbp": 400000,
+  "unit": "Per item",
+  "sortOrder": 14
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Bottoms",
+  "name": "Skirt",
+  "description": "Careful cleaning and shape-conscious finishing.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 15
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Bottoms",
+  "name": "Skirt, Pleated",
+  "description": "Pleats preserved through cleaning and finishing.",
+  "priceLbp": 750000,
+  "unit": "Per item",
+  "sortOrder": 16
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Bottoms",
+  "name": "Skirt, Long",
+  "description": "Full-length cleaning with careful handling.",
+  "priceLbp": 800000,
+  "unit": "Per item",
+  "sortOrder": 17
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Jackets",
+  "name": "Waistcoat",
+  "description": "Structured cleaning and precise pressing.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 18
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Jackets",
+  "name": "Jacket",
+  "description": "Care-label treatment for structured jackets.",
+  "priceLbp": 600000,
+  "unit": "Per item",
+  "sortOrder": 19
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Jackets",
+  "name": "Jacket, Denim",
+  "description": "Denim-safe cleaning with shape protection.",
+  "priceLbp": 650000,
+  "unit": "Per item",
+  "sortOrder": 20
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Jackets",
+  "name": "Coat",
+  "description": "Professional care for lined outerwear.",
+  "priceLbp": 750000,
+  "unit": "Per item",
+  "sortOrder": 21
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Jackets",
+  "name": "Overcoat",
+  "description": "Full-length outerwear cleaning and finishing.",
+  "priceLbp": 1350000,
+  "unit": "Per item",
+  "sortOrder": 22
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Full Body",
+  "name": "Casual Dress",
+  "description": "Everyday dress cleaning and neat finishing.",
+  "priceLbp": 800000,
+  "unit": "Per item",
+  "sortOrder": 23
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Full Body",
+  "name": "Suit, 2pcs",
+  "description": "Jacket and trousers cleaned as one set.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 24
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Full Body",
+  "name": "Tuxedo",
+  "description": "Formalwear care with detailed finishing.",
+  "priceLbp": 1500000,
+  "unit": "Per item",
+  "sortOrder": 25
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Full Body",
+  "name": "Formal Dress",
+  "description": "Careful cleaning for structured occasion wear.",
+  "priceLbp": 1800000,
+  "unit": "Per item",
+  "sortOrder": 26
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Full Body",
+  "name": "Evening Dress",
+  "description": "Specialist handling for delicate evening wear.",
+  "priceLbp": 2500000,
+  "unit": "Per item",
+  "sortOrder": 27
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Accessories",
+  "name": "Bag",
+  "description": "Material assessed before surface and lining care.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 28
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Accessories",
+  "name": "Tie",
+  "description": "Gentle cleaning that preserves shape.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 29
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Accessories",
+  "name": "Hat",
+  "description": "Item-specific care after material assessment.",
+  "priceLbp": 500000,
+  "unit": "Per item",
+  "sortOrder": 30
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Accessories",
+  "name": "Scarf",
+  "description": "Gentle cleaning and careful finishing.",
+  "priceLbp": 650000,
+  "unit": "Per item",
+  "sortOrder": 31
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Accessories",
+  "name": "Ski Uniform",
+  "description": "Technical garment care according to label.",
+  "priceLbp": 1350000,
+  "unit": "Per item",
+  "sortOrder": 32
+ },
+ {
+  "category": "Dry Cleaning",
+  "subcategory": "Accessories",
+  "name": "Sleeping Bag",
+  "description": "Thorough cleaning with complete drying.",
+  "priceLbp": 1800000,
+  "unit": "Per item",
+  "sortOrder": 33
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "T-shirt",
+  "description": "Steam-pressed for a smooth everyday finish.",
+  "priceLbp": 150000,
+  "unit": "Per item",
+  "sortOrder": 34
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Polo",
+  "description": "Collar and placket shaped for a crisp finish.",
+  "priceLbp": 200000,
+  "unit": "Per item",
+  "sortOrder": 35
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Shirt",
+  "description": "Pressed and returned ready to wear.",
+  "priceLbp": 250000,
+  "unit": "Per item",
+  "sortOrder": 36
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Shirt, Folded",
+  "description": "Pressed and neatly folded.",
+  "priceLbp": 250000,
+  "unit": "Per item",
+  "sortOrder": 37
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Blouse",
+  "description": "Shape-conscious pressing for delicate tops.",
+  "priceLbp": 300000,
+  "unit": "Per item",
+  "sortOrder": 38
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Sweater",
+  "description": "Gentle steam finishing to protect shape.",
+  "priceLbp": 300000,
+  "unit": "Per item",
+  "sortOrder": 39
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Shirt, Silk",
+  "description": "Low-temperature finishing for delicate silk.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 40
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Shorts",
+  "description": "Pressed for a clean, structured finish.",
+  "priceLbp": 200000,
+  "unit": "Per item",
+  "sortOrder": 41
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Pants, Trousers",
+  "description": "Crisp crease and tailored finishing.",
+  "priceLbp": 250000,
+  "unit": "Per item",
+  "sortOrder": 42
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Jacket",
+  "description": "Structured pressing with lapel attention.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 43
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Dress",
+  "description": "Shape-conscious pressing from top to hem.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 44
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Suit, 2pcs",
+  "description": "Jacket and trousers pressed as one set.",
+  "priceLbp": 500000,
+  "unit": "Per item",
+  "sortOrder": 45
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Skirt",
+  "description": "Smooth pressing with careful hem finishing.",
+  "priceLbp": 300000,
+  "unit": "Per item",
+  "sortOrder": 46
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Skirt, Pleated",
+  "description": "Pleats carefully restored and aligned.",
+  "priceLbp": 500000,
+  "unit": "Per item",
+  "sortOrder": 47
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Formal Dress",
+  "description": "Detailed pressing for structured formalwear.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 48
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Pillowcase",
+  "description": "Pressed smooth and neatly folded.",
+  "priceLbp": 100000,
+  "unit": "Per item",
+  "sortOrder": 49
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Bed Sheet",
+  "description": "Full-sheet pressing for a smooth finish.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 50
+ },
+ {
+  "category": "Pressing",
+  "subcategory": null,
+  "name": "Duvet Cover",
+  "description": "Pressed flat and neatly folded.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 51
+ },
+ {
+  "category": "Household",
+  "subcategory": "Duvets",
+  "name": "Duvet",
+  "description": "Professional cleaning with complete drying.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 52
+ },
+ {
+  "category": "Household",
+  "subcategory": "Duvets",
+  "name": "Blanket",
+  "description": "Freshened, cleaned and fully dried.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 53
+ },
+ {
+  "category": "Household",
+  "subcategory": "Duvets",
+  "name": "Duvet, Queen",
+  "description": "Queen-size duvet cleaning and drying.",
+  "priceLbp": 1350000,
+  "unit": "Per item",
+  "sortOrder": 54
+ },
+ {
+  "category": "Household",
+  "subcategory": "Duvets",
+  "name": "Duvet, Feather",
+  "description": "Gentle care for feather filling and cover.",
+  "priceLbp": 1800000,
+  "unit": "Per item",
+  "sortOrder": 55
+ },
+ {
+  "category": "Household",
+  "subcategory": "Bedding",
+  "name": "Pillowcase",
+  "description": "Washed, pressed and neatly folded.",
+  "priceLbp": 150000,
+  "unit": "Per item",
+  "sortOrder": 56
+ },
+ {
+  "category": "Household",
+  "subcategory": "Bedding",
+  "name": "Bed Sheet",
+  "description": "Cleaned, pressed and folded for storage.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 57
+ },
+ {
+  "category": "Household",
+  "subcategory": "Bedding",
+  "name": "Duvet Cover",
+  "description": "Cleaned, pressed and neatly folded.",
+  "priceLbp": 550000,
+  "unit": "Per item",
+  "sortOrder": 58
+ },
+ {
+  "category": "Household",
+  "subcategory": "Bedding",
+  "name": "Fitted Sheets",
+  "description": "Elasticated edges handled and folded carefully.",
+  "priceLbp": 700000,
+  "unit": "Per item",
+  "sortOrder": 59
+ },
+ {
+  "category": "Household",
+  "subcategory": "Bedding",
+  "name": "Pillow",
+  "description": "Professional cleaning after filling assessment.",
+  "priceLbp": 750000,
+  "unit": "Per item",
+  "sortOrder": 60
+ },
+ {
+  "category": "Household",
+  "subcategory": "Bedding",
+  "name": "Mattress",
+  "description": "Professional surface cleaning and freshening.",
+  "priceLbp": 2500000,
+  "unit": "Per item",
+  "sortOrder": 61
+ },
+ {
+  "category": "Household",
+  "subcategory": "Towels",
+  "name": "Towel, S",
+  "description": "Small towel washed, dried and folded.",
+  "priceLbp": 75000,
+  "unit": "Per item",
+  "sortOrder": 62
+ },
+ {
+  "category": "Household",
+  "subcategory": "Towels",
+  "name": "Towel, L",
+  "description": "Large towel washed, dried and folded.",
+  "priceLbp": 150000,
+  "unit": "Per item",
+  "sortOrder": 63
+ },
+ {
+  "category": "Household",
+  "subcategory": "Towels",
+  "name": "Bathmat",
+  "description": "Thorough cleaning for absorbent bath mats.",
+  "priceLbp": 150000,
+  "unit": "Per item",
+  "sortOrder": 64
+ },
+ {
+  "category": "Household",
+  "subcategory": "Towels",
+  "name": "Pool Towel",
+  "description": "Washed, dried and folded for pool use.",
+  "priceLbp": 200000,
+  "unit": "Per item",
+  "sortOrder": 65
+ },
+ {
+  "category": "Household",
+  "subcategory": "Towels",
+  "name": "Bathrobe",
+  "description": "Cleaned, dried and returned ready to wear.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 66
+ },
+ {
+  "category": "Household",
+  "subcategory": "Household Items",
+  "name": "Rug",
+  "description": "Professional cleaning based on fabric and size.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 67
+ },
+ {
+  "category": "Household",
+  "subcategory": "Household Items",
+  "name": "Tablecloth",
+  "description": "Stain-aware cleaning with careful finishing.",
+  "priceLbp": 700000,
+  "unit": "Per item",
+  "sortOrder": 68
+ },
+ {
+  "category": "Household",
+  "subcategory": "Household Items",
+  "name": "Sofa Cover",
+  "description": "Cleaning for removable fabric sofa covers.",
+  "priceLbp": 750000,
+  "unit": "Per item",
+  "sortOrder": 69
+ },
+ {
+  "category": "Household",
+  "subcategory": "Household Items",
+  "name": "Beach Couch Cover",
+  "description": "Cleaning for removable outdoor couch covers.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 70
+ },
+ {
+  "category": "Household",
+  "subcategory": "Curtains",
+  "name": "Voile Curtain, S",
+  "description": "Gentle cleaning for small sheer curtains.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 71
+ },
+ {
+  "category": "Household",
+  "subcategory": "Curtains",
+  "name": "Voile Curtain, L",
+  "description": "Gentle cleaning for large sheer curtains.",
+  "priceLbp": 1350000,
+  "unit": "Per item",
+  "sortOrder": 72
+ },
+ {
+  "category": "Household",
+  "subcategory": "Curtains",
+  "name": "Curtain, S",
+  "description": "Professional cleaning for small curtains.",
+  "priceLbp": 900000,
+  "unit": "Per item",
+  "sortOrder": 73
+ },
+ {
+  "category": "Household",
+  "subcategory": "Curtains",
+  "name": "Curtain, L",
+  "description": "Professional cleaning for large curtains.",
+  "priceLbp": 1500000,
+  "unit": "Per item",
+  "sortOrder": 74
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "Repair Stitch, S",
+  "description": "Minor seam, stitch or small tear repair.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 75
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "Repair Stitch, L",
+  "description": "Larger seam, stitch or tear repair.",
+  "priceLbp": 800000,
+  "unit": "Per item",
+  "sortOrder": 76
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "New Zip",
+  "description": "Removal and replacement of a garment zip.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 77
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "Skirt, Length",
+  "description": "Hem adjusted to your requested skirt length.",
+  "priceLbp": 500000,
+  "unit": "Per item",
+  "sortOrder": 78
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "Sleeve, Length",
+  "description": "Sleeves shortened or length adjusted after fitting.",
+  "priceLbp": 450000,
+  "unit": "Per item",
+  "sortOrder": 79
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "Trouser, Length",
+  "description": "Trouser hem adjusted to your requested length.",
+  "priceLbp": 350000,
+  "unit": "Per item",
+  "sortOrder": 80
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "Trouser, Waist",
+  "description": "Waist taken in or released after assessment.",
+  "priceLbp": 600000,
+  "unit": "Per item",
+  "sortOrder": 81
+ },
+ {
+  "category": "Alterations",
+  "subcategory": null,
+  "name": "Dress, Length",
+  "description": "Dress hem adjusted to your requested length.",
+  "priceLbp": 750000,
+  "unit": "Per item",
+  "sortOrder": 82
+ },
+ {
+  "category": "Carpets",
+  "subcategory": null,
+  "name": "Carpet — m²",
+  "description": "Professional carpet cleaning, priced per square metre.",
+  "priceLbp": 500000,
+  "unit": "Per square metre",
+  "sortOrder": 83
+ },
+ {
+  "category": "Carpets",
+  "subcategory": null,
+  "name": "Carpet Aajami — m²",
+  "description": "Specialist care for Aajami weave, priced per square metre.",
+  "priceLbp": 900000,
+  "unit": "Per square metre",
+  "sortOrder": 84
+ },
+ {
+  "category": "Carpets",
+  "subcategory": null,
+  "name": "Carpet Silk — m²",
+  "description": "Delicate silk carpet care, priced per square metre.",
+  "priceLbp": 1200000,
+  "unit": "Per square metre",
+  "sortOrder": 85
+ }
+]

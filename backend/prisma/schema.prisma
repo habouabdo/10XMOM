@@ -1,0 +1,169 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+}
+
+enum OrderStatus {
+  BOOKED
+  PICKED_UP
+  PRICED
+  PAID
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+}
+
+enum ServiceLevel {
+  STANDARD
+  EXPRESS
+}
+
+enum ApplicationStatus {
+  NEW
+  CONTACTED
+  HIRED
+  REJECTED
+}
+
+enum GiftCardStatus {
+  PENDING_PAYMENT
+  ACTIVE
+  REDEEMED
+  CANCELLED
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique @db.VarChar(160)
+  passwordHash String   @db.VarChar(255)
+  role         Role     @default(ADMIN)
+  createdAt    DateTime @default(now())
+}
+
+model Setting {
+  key   String @id @db.VarChar(64)
+  value Json
+}
+
+model Mom {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(60)
+  phone     String   @default("") @db.VarChar(20)
+  areas     Json
+  bio       String   @default("") @db.VarChar(300)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  orders    Order[]
+}
+
+model Order {
+  id            Int          @id @default(autoincrement())
+  code          String       @unique @db.VarChar(16)
+  customerName  String       @db.VarChar(80)
+  phone         String       @db.VarChar(20)
+  area          String       @db.VarChar(80)
+  address       String       @db.VarChar(300)
+  addressNotes  String       @default("") @db.VarChar(200)
+  items         Json
+  notes         String       @default("") @db.VarChar(500)
+  serviceLevel  ServiceLevel @default(STANDARD)
+  estimateUsd   Decimal?     @db.Decimal(10, 2)
+  momId         Int?
+  mom           Mom?         @relation(fields: [momId], references: [id], onDelete: SetNull)
+  pickupDate    String       @db.VarChar(10)
+  pickupSlot    String       @db.VarChar(11)
+  status        OrderStatus  @default(BOOKED)
+  priceUsd      Decimal?     @db.Decimal(10, 2)
+  giftCardId    Int?
+  giftCard      GiftCard?    @relation(fields: [giftCardId], references: [id], onDelete: SetNull)
+  giftAppliedUsd Decimal     @default(0) @db.Decimal(10, 2)
+  paymentLink   String       @default("") @db.VarChar(500)
+  paidAt        DateTime?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  events        OrderEvent[]
+  redemptions   GiftCardRedemption[]
+
+  @@index([momId, pickupDate, pickupSlot])
+  @@index([status])
+  @@index([phone])
+}
+
+model OrderEvent {
+  id        Int         @id @default(autoincrement())
+  orderId   Int
+  order     Order       @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  status    OrderStatus
+  note      String      @default("") @db.VarChar(300)
+  createdAt DateTime    @default(now())
+
+  @@index([orderId])
+}
+
+model Application {
+  id         Int               @id @default(autoincrement())
+  name       String            @db.VarChar(80)
+  phone      String            @db.VarChar(20)
+  area       String            @db.VarChar(80)
+  experience String            @default("") @db.VarChar(1000)
+  hasCar     Boolean           @default(false)
+  status     ApplicationStatus @default(NEW)
+  createdAt  DateTime          @default(now())
+}
+
+model PriceItem {
+  id          Int     @id @default(autoincrement())
+  category    String  @db.VarChar(60)
+  subcategory String? @db.VarChar(60)
+  name        String  @db.VarChar(100)
+  description String  @default("") @db.VarChar(300)
+  priceLbp    Int
+  unit        String  @db.VarChar(60)
+  sortOrder   Int     @default(0)
+  active      Boolean @default(true)
+
+  @@index([category, sortOrder])
+}
+
+model GiftCard {
+  id             Int                  @id @default(autoincrement())
+  code           String               @unique @db.VarChar(16)
+  amountUsd      Decimal              @db.Decimal(10, 2)
+  balanceUsd     Decimal              @db.Decimal(10, 2)
+  status         GiftCardStatus       @default(PENDING_PAYMENT)
+  buyerName      String               @db.VarChar(80)
+  buyerPhone     String               @db.VarChar(20)
+  recipientName  String               @db.VarChar(80)
+  recipientPhone String               @default("") @db.VarChar(20)
+  message        String               @default("") @db.VarChar(300)
+  paymentLink    String               @default("") @db.VarChar(500)
+  paidAt         DateTime?
+  expiresAt      DateTime?
+  createdAt      DateTime             @default(now())
+  orders         Order[]
+  redemptions    GiftCardRedemption[]
+
+  @@index([status])
+}
+
+model GiftCardRedemption {
+  id         Int      @id @default(autoincrement())
+  giftCardId Int
+  giftCard   GiftCard @relation(fields: [giftCardId], references: [id], onDelete: Restrict)
+  orderId    Int
+  order      Order    @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  amountUsd  Decimal  @db.Decimal(10, 2)
+  createdAt  DateTime @default(now())
+
+  @@index([giftCardId])
+  @@index([orderId])
+}
